@@ -60,7 +60,7 @@
     <div class="splide__track">
         <ul class="splide__list">
             <li class="splide__slide" data-splide-interval="5000">
-                <img src="https://picsum.photos/2880/600" alt="Banner">
+                <img  src="https://picsum.photos/2880/600" alt="Banner">
             </li>
             <li class="splide__slide" data-splide-interval="5000">
                 <img src="https://picsum.photos/2881/601" alt="Banner">
@@ -255,21 +255,23 @@
 </script>
 
 <script>
-    // if (window.innerWidth < 700) {
-    //     document.addEventListener('DOMContentLoaded', function () {
-    //         new Splide('#image-carousel', {
-    //             width: '100vw',
-    //             heightRatio : 0.35,
-    //             type: 'loop',
-    //             autoplay: 'play',
-    //             speed: 2000,
-    //             resetProgress: false
-    //         }).mount();
-    //
-    //     });
-    //
-    // } else {
+    if (window.innerWidth < 700) {
         document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#image-carousel', {
+                width: '100vw',
+                heightRatio : 0.35,
+                type: 'loop',
+                autoplay: 'play',
+                speed: 2000,
+                resetProgress: false
+            }).mount();
+
+        });
+
+    } else {
+
+        document.addEventListener('DOMContentLoaded', function () {
+
             new Splide('#image-carousel', {
                 width: '100vw',
                 type: 'loop',
@@ -279,10 +281,11 @@
                 speed: 2000,
                 resetProgress: false,
 
+
             }).mount();
-            
-        // });
-    });
+
+        });
+    };
 
 </script>
 </body>
